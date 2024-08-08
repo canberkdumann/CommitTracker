@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Commit List</title>
+</head>
+<body>
+<h1 style="color: red;">Commit List</h1>
+<ul>
+    <li th:each="commit : ${commits}">
+        <a th:href="@{/commit/{hash}(hash=${commit.hash})}" th:text="${commit.hash}"></a> - <span th:text="${commit.timestamp}"></span> - <span th:text="${commit.developer.username}"></span>
+    </li>
+</ul>
+</body>
+</html>

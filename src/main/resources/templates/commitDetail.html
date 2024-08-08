@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Commit Detail</title>
+</head>
+<body>
+<h1>Commit: <span th:text="${commit.hash}"></span></h1>
+<p>Timestamp: <span th:text="${commit.timestamp}"></span></p>
+<p>Message: <span th:text="${commit.message}"></span></p>
+<p>Author: <span th:text="${commit.developer.username}"></span></p>
+<p>Patch: <span th:text="${commit.patch}"></span></p>
+</body>
+</html>
